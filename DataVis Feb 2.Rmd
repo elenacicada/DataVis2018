@@ -1,0 +1,31 @@
+---
+title: "DataVis Feb 2"
+author: "Elena Meyer"
+date: "February 2, 2018"
+output:
+- html_document
+- word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(ggplot2)
+library(devtools)
+library(tidyverse)
+```
+
+## Intro  
+
+The data in "HollywoodMovies" shows movies from 2007-2008, including data on the involved study, kind of story, Rotten Tomatoes score, Domestic gross, and other parameters. 
+
+## Summary of Data 
+
+![Iron Man Movie Poster](file:///C:/Users/elena/Documents/Data and Data Visualization/Data and Data Visualization/ironman.jpeg)
+
+```{r}
+HollywoodMovies2 <- select(HollywoodMovies, Movie, Story, RottenTomatoes)
+summary(HollywoodMovies2)
+MyMean <- mean(HollywoodMovies2$RottenTomatoes, na.rm = TRUE)
+```
+
