@@ -1,0 +1,29 @@
+---
+title: "Lab 2 RMD"
+author: "Elena Meyer"
+date: "February 14, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Lock5Data)
+library(Lock5withR)
+library(lattice)
+library(graphics)
+```
+
+## Cereal Dataset 
+
+The cereal dataset shows details of various popular cereal brands, such as calories, nutritional contents, and the manufactoring company. 
+
+```{r}
+obj <- Cereal
+head(Cereal)
+```
+
+```{r}
+dotplot(data = Cereal, Calories~Sugars)
+summary(Cereal)
+```
+
